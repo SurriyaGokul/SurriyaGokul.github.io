@@ -266,11 +266,30 @@
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
-      color: var(--gray);
+      font-size: 1.35rem;
+      color: var(--light);
       max-width: 600px;
       margin: 0 auto 2.5rem;
       line-height: 1.8;
+      font-weight: 500;
+    }
+
+    .hero-subtitle .highlight {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-subtitle .sub-highlight {
+      display: block;
+      font-size: 1.15rem;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
     }
 
     .hero-buttons {
@@ -1060,8 +1079,8 @@
         Hi, I'm <span class="gradient">Surriya Gokul</span>
       </h1>
       <p class="hero-subtitle">
-        Senior Undergraduate at IIT Gandhinagar<br>
-        Computer Science and Engineering
+        <span class="highlight">Senior Undergraduate at IIT Gandhinagar</span>
+        <span class="sub-highlight">Computer Science and Engineering</span>
       </p>
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">
@@ -1093,7 +1112,7 @@
       <div class="about-cards reveal">
         <div class="about-card">
           <div class="about-card-icon">
-            <img src="barclays-logo.png" alt="Barclays" style="width: 60px; height: 60px; object-fit: contain;">
+            <img src="barclays-logo.png" alt="Barclays" style="width: 100%; height: 100%; object-fit: contain;">
           </div>
           <h3>Experience</h3>
           <p class="about-card-title">Upcoming IB Quant Intern</p>
@@ -1101,7 +1120,7 @@
         </div>
         <div class="about-card">
           <div class="about-card-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Indian_Institute_of_Technology_Gandhinagar_Logo.svg" alt="IIT Gandhinagar" style="width: 60px; height: 60px; object-fit: contain;">
+            <img src="iitgn-logo.png" alt="IIT Gandhinagar" style="width: 100%; height: 100%; object-fit: contain;">
           </div>
           <h3>Education</h3>
           <p class="about-card-title">B.Tech Computer Science and Engineering</p>
