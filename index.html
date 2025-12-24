@@ -220,6 +220,25 @@
       animation: fadeInUp 1s ease;
     }
 
+    .hero-image {
+      width: 280px;
+      height: 280px;
+      margin: 0 auto 2.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid transparent;
+      background: var(--gradient);
+      padding: 5px;
+      box-shadow: 0 15px 50px rgba(99, 102, 241, 0.4);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -454,15 +473,15 @@
     }
 
     .about-card-icon {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       margin: 0 auto 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.05);
+      background: transparent;
       border-radius: 20px;
-      padding: 15px;
+      padding: 0;
     }
 
     .about-card h3 {
@@ -482,6 +501,25 @@
     .about-card-subtitle {
       font-size: 0.9rem;
       color: var(--gray);
+    }
+
+    .about-content-full {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-content-full h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .about-content-full p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     .about-content h3 {
@@ -631,6 +669,7 @@
       font-size: 4rem;
       position: relative;
       overflow: hidden;
+      border-radius: 20px 20px 0 0;
     }
 
     .project-image::before {
@@ -1061,7 +1100,6 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="menu-toggle" id="menuToggle">
@@ -1075,6 +1113,9 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
+      <div class="hero-image">
+        <img src="profile.jpeg" alt="Surriya Gokul">
+      </div>
       <h1 class="hero-title">
         Hi, I'm <span class="gradient">Surriya Gokul</span>
       </h1>
@@ -1110,12 +1151,20 @@
       <!-- Experience & Education Cards -->
       <div class="about-cards reveal">
         <div class="about-card">
-          <div class="about-card-icon">
-            <img src="barclays-logo.png" alt="Barclays" style="width: 100%; height: 100%; object-fit: contain;">
+          <div class="about-card-icon" style="width: 200px; height: 200px;">
+            <img src="barclays-logo.png" alt="Barclays" style="width: 200%; height: 200%; object-fit: contain;">
           </div>
           <h3>Experience</h3>
           <p class="about-card-title">Upcoming IB Quant Intern</p>
-          <p class="about-card-subtitle">@ Barclays</p>
+          <p class="about-card-subtitle"><strong style="color: var(--light); font-weight: 700; font-size: 1.1rem;">@ Barclays</strong></p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <img src="center-logo.svg" alt="FlowBit.AI" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <h3>Experience</h3>
+          <p class="about-card-title">AI Developer Intern</p>
+          <p class="about-card-subtitle"><strong style="color: var(--light); font-weight: 700; font-size: 1.1rem;">@ FlowBit.AI</strong></p>
         </div>
         <div class="about-card">
           <div class="about-card-icon">
@@ -1123,30 +1172,21 @@
           </div>
           <h3>Education</h3>
           <p class="about-card-title">B.Tech Computer Science and Engineering</p>
-          <p class="about-card-subtitle">2023 - 2027</p>
+          <p class="about-card-subtitle"><strong style="color: var(--light); font-weight: 700; font-size: 1.1rem;">2023 - 2027</strong></p>
         </div>
       </div>
 
-      <div class="about-grid">
-        <div class="about-image reveal">
-          <div class="about-image-wrapper">
-            <div class="about-image-inner">
-              <img src="profile.jpeg" alt="Surriya Gokul" style="width: 100%; height: 100%; object-fit: cover; border-radius: 22px;">
-            </div>
-          </div>
-        </div>
-        <div class="about-content reveal">
-          <h3>Bridging Theory and Practice in AI</h3>
-          <p>
-            I've always been fascinated by the role of Mathematics in uncovering the intricacies of computing and its ability to solve complex problems. I'm driven by a passion for Theoretical Deep Learning, Probabilistic Machine Learning, and real-world problem-solving.
-          </p>
-          <p>
-            I specialize in developing innovative solutions across Reinforcement Learning, Computer Vision, and Natural Language Processing. With experience in building systems that optimize decision-making, analyze complex datasets, and enhance user experiences, I enjoy tackling challenges that blend creativity and technical expertise.
-          </p>
-          <p>
-            From implementing algorithms from scratch to designing efficient data pipelines, my focus is on creating impactful projects that bridge theory and practice. I am keen on developing interactive visual representations of Machine Learning Processes and Physical Models.
-          </p>
-        </div>
+      <div class="about-content-full reveal">
+        <h3>Bridging Theory and Practice in AI</h3>
+        <p>
+          I've always been fascinated by the role of Mathematics in uncovering the intricacies of computing and its ability to solve complex problems. I'm driven by a passion for Theoretical Deep Learning, Probabilistic Machine Learning, and real-world problem-solving.
+        </p>
+        <p>
+          I specialize in developing innovative solutions across Reinforcement Learning, Computer Vision, and Natural Language Processing. With experience in building systems that optimize decision-making, analyze complex datasets, and enhance user experiences, I enjoy tackling challenges that blend creativity and technical expertise.
+        </p>
+        <p>
+          From implementing algorithms from scratch to designing efficient data pipelines, my focus is on creating impactful projects that bridge theory and practice. I am keen on developing interactive visual representations of Machine Learning Processes and Physical Models.
+        </p>
       </div>
     </div>
   </section>
@@ -1161,54 +1201,54 @@
       <div class="skills-grid">
         <div class="skill-card reveal">
           <div class="skill-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Machine Learning</h3>
+          <p>Building intelligent systems with deep learning, reinforcement learning, and probabilistic models</p>
+          <div class="skill-tags">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">PyTorch Geometric</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3>LLMs & NLP</h3>
+          <p>Developing RAG pipelines, document intelligence systems, and language model applications</p>
+          <div class="skill-tags">
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">FAISS</span>
+            <span class="skill-tag">Ollama</span>
+            <span class="skill-tag">RAG</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
             <i class="fas fa-code"></i>
           </div>
-          <h3>Frontend Development</h3>
-          <p>Creating responsive, interactive, and visually stunning user interfaces</p>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h3>Backend Development</h3>
-          <p>Building robust, scalable, and secure server-side applications</p>
+          <h3>Programming</h3>
+          <p>Writing efficient, clean code across multiple languages and paradigms</p>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">APIs</span>
-            <span class="skill-tag">Databases</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h3>Responsive Design</h3>
-          <p>Designing seamless experiences across all devices and screen sizes</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Mobile-First</span>
-            <span class="skill-tag">Flexbox</span>
-            <span class="skill-tag">Grid</span>
-            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">Verilog</span>
+            <span class="skill-tag">MATLAB</span>
           </div>
         </div>
         <div class="skill-card reveal">
           <div class="skill-icon">
             <i class="fas fa-tools"></i>
           </div>
-          <h3>Tools & Workflow</h3>
-          <p>Leveraging modern tools for efficient development workflows</p>
+          <h3>Tools & Frameworks</h3>
+          <p>Leveraging modern tools for efficient ML development and deployment</p>
           <div class="skill-tags">
             <span class="skill-tag">Git</span>
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">OpenAI Gym</span>
             <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">Terminal</span>
-            <span class="skill-tag">Docker</span>
           </div>
         </div>
       </div>
@@ -1224,96 +1264,71 @@
       </div>
       <div class="projects-grid">
         <div class="project-card reveal">
-          <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-            🚀
+          <div class="project-image" style="background: url('Gemini_Generated_Image_49eare49eare49ea.png') center/cover no-repeat;">
             <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/SurriyaGokul/NetMCP" class="project-link"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-content">
-            <h3>Project One</h3>
-            <p>A modern web application showcasing innovative solutions and clean architecture.</p>
+            <h3>NetMCP</h3>
+            <p>AI-native network configuration system bridging high-level optimisation goals and low-level Linux networking commands. Features 29 configuration cards, 5 specialised profiles, and enterprise-grade safety through Model Context Protocol.</p>
             <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">MCP</span>
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">Networking</span>
+              <span class="tech-tag">AI</span>
             </div>
           </div>
         </div>
         <div class="project-card reveal">
-          <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-            💡
+          <div class="project-image" style="background: url('Gemini_Generated_Image_t93hjxt93hjxt93h.png') center/cover no-repeat;">
             <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
               <a href="#" class="project-link"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-content">
-            <h3>Project Two</h3>
-            <p>An interactive platform designed to enhance user engagement and experience.</p>
+            <h3>GraphSeeker</h3>
+            <p>Scalable molecular graph retrieval system using Siamese Graph Transformer with NT-Xent contrastive loss. Achieved 0.9117 Recall@10 and outperformed GCN, GIN, GAT baselines.</p>
             <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Django</span>
-              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Graph Transformers</span>
+              <span class="tech-tag">FAISS</span>
+              <span class="tech-tag">GNN</span>
             </div>
           </div>
         </div>
         <div class="project-card reveal">
-          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-            ⚡
+          <div class="project-image" style="background: url('nerf.png') center/cover no-repeat;">
             <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
               <a href="#" class="project-link"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-content">
-            <h3>Project Three</h3>
-            <p>A high-performance application built with cutting-edge technologies.</p>
+            <h3>CrossDepth-NeRF</h3>
+            <p>Depth-aware 3D scene editing framework integrating ControlNet with NeRF. Achieved 30.008 CLIP score (5% improvement) with cross-attention fusion for geometric consistency.</p>
             <div class="project-tech">
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">Prisma</span>
+              <span class="tech-tag">NeRF</span>
+              <span class="tech-tag">ControlNet</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">3D Editing</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <div class="section-container">
-      <div class="section-header reveal">
-        <span class="section-label">Journey</span>
-        <h2 class="section-title">Experience & Education</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2024 - Present</div>
-            <h3>Software Developer</h3>
-            <h4>Company Name</h4>
-            <p>Building innovative solutions and contributing to cutting-edge projects.</p>
+        <div class="project-card reveal">
+          <div class="project-image" style="background: url('Gemini_Generated_Image_u4reumu4reumu4re.png') center/cover no-repeat;">
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2023 - 2024</div>
-            <h3>Junior Developer</h3>
-            <h4>Previous Company</h4>
-            <p>Developed and maintained web applications using modern technologies.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2020 - 2024</div>
-            <h3>Bachelor's Degree</h3>
-            <h4>University Name</h4>
-            <p>Computer Science / Software Engineering with focus on modern development practices.</p>
+          <div class="project-content">
+            <h3>AI Document Assistant</h3>
+            <p>Modular multimodal document analysis system with ReAct-based agent framework. Features RAG pipeline with FAISS and LRU+TTL cache reducing compute cost by 30%.</p>
+            <div class="project-tech">
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">Ollama</span>
+              <span class="tech-tag">RAG</span>
+              <span class="tech-tag">Streamlit</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1335,9 +1350,9 @@
             Or just want to say hi? Feel free to reach out!
           </p>
           <div class="contact-links">
-            <a href="mailto:your.email@example.com" class="contact-link">
+            <a href="mailto:surriya.gokul@iitgn.ac.in" class="contact-link">
               <i class="fas fa-envelope"></i>
-              <span>your.email@example.com</span>
+              <span>surriya.gokul@iitgn.ac.in</span>
             </a>
             <a href="#" class="contact-link">
               <i class="fab fa-linkedin"></i>
