@@ -411,6 +411,60 @@
       opacity: 0.3;
     }
 
+    /* About Cards - Experience & Education */
+    .about-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .about-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-card-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 10px;
+    }
+
+    .about-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+
+    .about-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--light);
+      margin-bottom: 0.25rem;
+    }
+
+    .about-card-subtitle {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
     .about-content h3 {
       font-size: 1.75rem;
       margin-bottom: 1.5rem;
@@ -1032,8 +1086,29 @@
     <div class="section-container">
       <div class="section-header reveal">
         <span class="section-label">About Me</span>
-        <h2 class="section-title">Turning Vision Into Reality</h2>
+        <h2 class="section-title">Passionate About AI & ML</h2>
       </div>
+      
+      <!-- Experience & Education Cards -->
+      <div class="about-cards reveal">
+        <div class="about-card">
+          <div class="about-card-icon">
+            <img src="barclays-logo.png" alt="Barclays" style="width: 60px; height: 60px; object-fit: contain;">
+          </div>
+          <h3>Experience</h3>
+          <p class="about-card-title">Upcoming IB Quant Intern</p>
+          <p class="about-card-subtitle">@ Barclays</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Indian_Institute_of_Technology_Gandhinagar_Logo.svg" alt="IIT Gandhinagar" style="width: 60px; height: 60px; object-fit: contain;">
+          </div>
+          <h3>Education</h3>
+          <p class="about-card-title">B.Tech Computer Science and Engineering</p>
+          <p class="about-card-subtitle">2023 - 2027</p>
+        </div>
+      </div>
+
       <div class="about-grid">
         <div class="about-image reveal">
           <div class="about-image-wrapper">
@@ -1043,28 +1118,28 @@
           </div>
         </div>
         <div class="about-content reveal">
-          <h3>Building the future, one line of code at a time</h3>
+          <h3>Bridging Theory and Practice in AI</h3>
           <p>
-            I'm a dedicated developer with a passion for creating impactful digital solutions. 
-            With a strong foundation in modern technologies and a keen eye for design, 
-            I strive to build applications that are not only functional but also beautiful.
+            I've always been fascinated by the role of Mathematics in uncovering the intricacies of computing and its ability to solve complex problems. I'm driven by a passion for Theoretical Deep Learning, Probabilistic Machine Learning, and real-world problem-solving.
           </p>
           <p>
-            When I'm not coding, you can find me exploring new technologies, 
-            contributing to open-source projects, or sharing knowledge with the developer community.
+            I specialize in developing innovative solutions across Reinforcement Learning, Computer Vision, and Natural Language Processing. With experience in building systems that optimize decision-making, analyze complex datasets, and enhance user experiences, I enjoy tackling challenges that blend creativity and technical expertise.
+          </p>
+          <p>
+            From implementing algorithms from scratch to designing efficient data pipelines, my focus is on creating impactful projects that bridge theory and practice. I am keen on developing interactive visual representations of Machine Learning Processes and Physical Models.
           </p>
           <div class="about-stats">
             <div class="stat">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Projects Completed</div>
+              <div class="stat-number">AI/ML</div>
+              <div class="stat-label">Focus Area</div>
             </div>
             <div class="stat">
-              <div class="stat-number">10+</div>
-              <div class="stat-label">Technologies</div>
+              <div class="stat-number">RL</div>
+              <div class="stat-label">Reinforcement Learning</div>
             </div>
             <div class="stat">
-              <div class="stat-number">∞</div>
-              <div class="stat-label">Learning Spirit</div>
+              <div class="stat-number">CV</div>
+              <div class="stat-label">Computer Vision</div>
             </div>
           </div>
         </div>
